@@ -1,0 +1,12 @@
+{
+    "name": "marsislav/mcms-2.2-main",
+    "require": {
+        "phpmailer/phpmailer": "^6.4"
+    },
+    "authors": [
+        {
+            "name": "Miroslav Kostadinov - Marsislav",
+            "email": "mkostadinov87@gmail.com"
+        }
+    ]
+}
