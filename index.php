@@ -12,7 +12,7 @@
 
         <!-- Blog Entries Column -->
 
-        <div class="col-md-8">
+        <div class="col-md-12">
 
             <?php
 
@@ -50,7 +50,6 @@
             
 
          $post_query_count = "SELECT * FROM `posts` ORDER BY `post_date` ASC";
-echo "HERE!";
          }   
 
         $find_count = mysqli_query($connection,$post_query_count);
@@ -66,7 +65,6 @@ echo "HERE!";
         $count  = ceil($count /$per_page);
 
         $query = "SELECT * FROM posts LIMIT $page_1, $per_page ";
-        echo "OR HERE";
         $select_all_posts_query = mysqli_query($connection,$query);
 
         while($row = mysqli_fetch_assoc($select_all_posts_query)) {

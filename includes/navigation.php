@@ -3,7 +3,7 @@
     <div class="logo">
                                 <a href="/" class="standard-logo">
                     <div class="logo-container">
-                        <h1>&lt;marsislav/&gt;</h1>
+                        <h2>&lt;marsislav/&gt;</h2>
                         <p>Уеб разработчик</p>
                        
                     </div>
@@ -16,6 +16,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="bi bi-list"></i>
             </button>
+ 
             <div class="menuDots collapse navbar-collapse" id="navbarSupportedContent">
             <ul class=" menu-main navbar-nav me-auto mb-2 mb-lg-0" id ="menu-main">
                 <?php 
