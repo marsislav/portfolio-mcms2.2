@@ -1,5 +1,6 @@
 <div class="card card-body bg-light">
     <h4>Popular posts:</h4>
+    <ul>
     <?php
                 $query="SELECT * FROM posts ORDER BY post_views_count ASC LIMIT 5 ";
                 $select_all_navigation_query=mysqli_query($connection, $query);
@@ -10,4 +11,5 @@
                 }
                 
               ?>
+    </ul>
 </div>

@@ -23,16 +23,16 @@
 
 <!-- Page Content -->
 <div class="container">
+    <div class="all">
 
     <div class="form-gap"></div>
     <div class="container">
         <div class="row">
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <div class="text-center">
-                            <h3><i class="fa fa-user fa-4x"></i></h3>
-                            <h2 class="text-center">Login</h2>
+                            <h3>Вход</h3>
+                            
                             <div class="panel-body">
 
 
@@ -67,12 +67,12 @@
 
                             </div><!-- Body-->
 
-                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
 
     <hr>
 

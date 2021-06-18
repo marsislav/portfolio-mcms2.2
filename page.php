@@ -9,6 +9,7 @@
 
 <!-- Page Content -->
 <div class="container">
+    <div class="all page">
     <div class="row">
         <!-- Blog Entries Column -->
 
@@ -44,7 +45,8 @@
     <?php
         }
         ?>
-</div>
+
+
 <!-- /.row -->
 
 <hr />

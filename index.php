@@ -12,7 +12,7 @@
 
         <!-- Blog Entries Column -->
 
-        <div class="col-md-12">
+        
 
             <?php
 
@@ -58,7 +58,7 @@
         if($count < 1) {
 
 
-            echo "<h1 class='text-center'>No posts available</h1>";
+            echo "<h3 class='text-center'>не са налични статии</h3>";
 
         } else {
 
@@ -73,7 +73,7 @@
         $post_author = $row['post_author'];
         $post_date = $row['post_date'];
         $post_image = $row['post_image'];
-        $post_content=mb_substr($row['post_content'],0,300, 'utf-8');
+        $post_content=mb_substr($row['post_content'],0,400, 'utf-8');
         $post_status = $row['post_status'];
         ?>
 
@@ -82,35 +82,35 @@
             <!-- First Blog Post -->
 
 
+            <h3>Блог</h3>
+           
 
-            <h2>
-                <a href="post.php?p_id=<?php echo $post_id;?>"><?php echo $post_title ?></a>
-            </h2>
-            <p class="lead">
-                by <a
-                    href="author_posts.php?author=<?php echo $post_author;?>&p_id=<?php echo $post_id;?>"><?php echo $post_author ?></a>
-            </p>
-            <p><span class="glyphicon glyphicon-time"></span> <?php echo $post_date ?></p>
-            <hr>
-
-
+<div class="col-md-6">
             <a href="post.php?p_id=<?php echo $post_id; ?>">
                 <img class="img-fluid" src="img/<?php echo $post_image;?>" alt="">
             </a>
+        </div>
 
-
-
-            <hr>
-            <div class="exc"><?php echo $post_content?></div>
-            <a class="btn btn-primary block" href="post.php?p_id=<?php echo $post_id; ?>">Read More <span
+ 
+            <div class="col-md-6">
+            <h4>
+                <a href="post.php?p_id=<?php echo $post_id;?>"><?php echo $post_title ?></a>
+            </h4>
+            <p>
+                от <a
+                    href="author_posts.php?author=<?php echo $post_author;?>&p_id=<?php echo $post_id;?>"><?php echo $post_author ?></a>, на дата/ час <span class="glyphicon glyphicon-time"></span> <?php echo $post_date ?>
+            </p>
+            <hr class="tight">
+            <div class="exc"><?php echo $post_content?> ...</div>
+            <a class="btn btn-primary block" href="post.php?p_id=<?php echo $post_id; ?>">Прочети... <span
                     class="glyphicon glyphicon-chevron-right"></span></a>
-
+        </div>
             <hr>
 
 
             <?php }  } ?>
 
-        </div>
+        
 
         <!-- Blog Sidebar Widgets Column -->
 
@@ -140,5 +140,6 @@
          ?>
          
     </ul>
+    </div>
 
 <?php include "includes/footer.php";?>

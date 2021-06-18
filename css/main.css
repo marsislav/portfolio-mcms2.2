@@ -103,12 +103,20 @@ section {
 hr {
   margin: 30px 0 15px 0;
 }
+hr.tight {
+  margin: 5px 0 5px 0;
+}
 main li {
   list-style-position: inside;
   margin: 15px 0;
 }
 main ul li {
   list-style-type: disc;
+}
+.page ul li {
+  color: #063e41;
+  text-indent: 10px;
+  list-style-type: none;
 }
 
 main ol li {
@@ -123,6 +131,11 @@ figcaption {
 .required {
   color: #f00;
 }
+a {
+  text-decoration: none;
+  color: #063e41;
+}
+
 /*END OF CSS RESET*/
 /*Body*/
 body {
@@ -130,12 +143,14 @@ body {
     radial-gradient(circle, #13636f, #0f5a63, #0b5057, #08474c, #063e41);
   background-repeat: repeat-x, no-repeat;
   background-position: left 150px, center;
+  font-family: "Roboto Condensed", sans-serif;
 }
 .all {
   padding: 10px;
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   position: relative;
+  margin-bottom: 70px;
 }
 .logo {
   margin-top: 30px;
@@ -149,8 +164,8 @@ body {
 .logo-container h2 {
   font-size: 34px;
 }
+
 header .menuDots {
-  font-family: "Roboto Condensed", sans-serif;
   color: #4c4d4d;
   /*line-height: 60px;*/
   position: relative;
@@ -392,6 +407,7 @@ header .menuDots li:nth-child(5)::after {
     font-weight: 900;
   }
 }
+
 /*END OF MAIN MENU*/
 /*Admin Tools*/
 .admin_tools {
@@ -592,4 +608,41 @@ header .menuDots li:nth-child(5)::after {
   visibility: visible;
   opacity: 1;
   z-index: 3;
+}
+
+/*Main*/
+.all h3,
+aside h3 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+.all h4,
+aside h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.all h3:after,
+.all h4:after,
+aside h4:after,
+aside h3:after {
+  content: "";
+  display: block;
+  background-image: radial-gradient(
+    circle,
+    #13636f,
+    #0f5a63,
+    #0b5057,
+    #08474c,
+    #063e41
+  );
+  width: 10%;
+  height: 2px;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+/*End of main*/
+/*Footer*/
+footer .container {
+  padding: 10px 0;
 }
