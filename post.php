@@ -9,12 +9,12 @@
  
     <!-- Page Content -->
     <div class="container">
-
+        <div class="all">
         <div class="row">
 
             <!-- Blog Entries Column -->
             
-            <div class="col-md-8">
+            <div class="col-md-12">
                
                <?php
 
@@ -23,7 +23,7 @@
        $the_post_id = $_GET['p_id'];
 
 
-
+/*
         $update_statement = mysqli_prepare($connection, "UPDATE posts SET post_views_count = post_views_count + 1 WHERE post_id = ?");
 
         mysqli_stmt_bind_param($update_statement, "i", $the_post_id);
@@ -38,7 +38,7 @@
 
         die("query failed" );
     }
-
+*/
 
     if(isset($_SESSION['username']) && is_admin($_SESSION['username']) ) {
 
@@ -231,7 +231,6 @@
         <!-- /.row -->
 
         <hr>
-        </div>
 
    
 
