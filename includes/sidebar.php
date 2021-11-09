@@ -28,33 +28,18 @@
     <label class="close-menu" for="checked"></label>
     <nav class="drawer-menu">
 
-            <h4>Blog Search</h4>
+            <h4>Търси:</h4>
             <form action="search.php" method="post">
                 <div class="input-group">
                     <input name="search" type="text" class="form-control">
                     <span class="input-group-btn">
-                    <button name="submit" class="btn btn-default" type="submit">
+                    <button name="submit" class="btn btn-primary" type="submit">
                         <i class="bi bi-search"></i>
                     </button>
                     </span>
                 </div>
             </form>
 
-            <div class="card card-body bg-light">
-
-        
-        <h4>Blog Categories</h4>
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="list-unstyled">
-
-
-                </ul>
-            </div>
-
-        </div>
-        <!-- /.row -->
-    </div>
             
     <?php include "widget.php"; ?>
 
