@@ -48,14 +48,14 @@ require './vendor/autoload.php';
                     $mail->CharSet = 'UTF-8';
 
 
-                    $mail->setFrom('someone@something.something', 'SOME NAME');
+                    $mail->setFrom('mkostadinov87@gmail.com', 'Marsislav');
                     $mail->addAddress($email);
 
                     $mail->Subject = 'This is a test email';
 
                     $mail->Body = '<p>Please click to reset your password
 
-                    <a href="https://web-company.org/reset.php?email='.$email.'&token='.$token.' ">https://web-company.org/reset.php?email='.$email.'&token='.$token.'</a>
+                    <a href="https://marsislav.net/reset.php?email='.$email.'&token='.$token.' ">https://web-company.org/reset.php?email='.$email.'&token='.$token.'</a>
 
                     </p>';
 
