@@ -7,12 +7,12 @@
 
 <!-- Page Content -->
 <div class="container">
-<div class="all">
+
     <div class="row">
-    <h1>Блог</h1>
+
         <!-- Blog Entries Column -->
 
-        
+        <div class="col-md-8">
 
             <?php
 
@@ -47,9 +47,8 @@
 
          } else {
 
-            
+         $post_query_count = "SELECT * FROM posts WHERE post_status = 'published' ORDER BY post_date DESC";
 
-         $post_query_count = "SELECT * FROM `posts` ORDER BY `post_date` ASC";
          }   
 
         $find_count = mysqli_query($connection,$post_query_count);
@@ -58,13 +57,13 @@
         if($count < 1) {
 
 
-            echo "<h3 class='text-center'>не са налични статии</h3>";
+            echo "<h1 class='text-center'>No posts available</h1>";
 
         } else {
 
         $count  = ceil($count /$per_page);
 
-        $query = "SELECT * FROM posts LIMIT $page_1, $per_page ";
+        $query = "SELECT * FROM posts LIMIT $page_1, $per_page";
         $select_all_posts_query = mysqli_query($connection,$query);
 
         while($row = mysqli_fetch_assoc($select_all_posts_query)) {
@@ -73,7 +72,7 @@
         $post_author = $row['post_author'];
         $post_date = $row['post_date'];
         $post_image = $row['post_image'];
-        $post_content=mb_substr($row['post_content'],0,400, 'utf-8');
+        $post_content=mb_substr($row['post_content'],0,300, 'utf-8');
         $post_status = $row['post_status'];
         ?>
 
@@ -83,48 +82,34 @@
 
 
 
-           
-<div class="row">
-<div class="col-md-6">
+            <h2>
+                <a href="post.php?p_id=<?php echo $post_id;?>"><?php echo $post_title ?></a>
+            </h2>
+            <p class="lead">
+                by <a
+                    href="author_posts.php?author=<?php echo $post_author;?>&p_id=<?php echo $post_id;?>"><?php echo $post_author ?></a>
+            </p>
+            <p><span class="glyphicon glyphicon-time"></span> <?php echo $post_date ?></p>
+            <hr>
+
+
             <a href="post.php?p_id=<?php echo $post_id; ?>">
                 <img class="img-fluid" src="img/<?php echo $post_image;?>" alt="">
             </a>
-        </div>
 
- 
-            <div class="col-md-6">
-            <h4>
-                <a href="post.php?p_id=<?php echo $post_id;?>"><?php echo $post_title ?></a>
-            </h4>
-            <p>
-                от <a
-                    href="author_posts.php?author=<?php echo $post_author;?>&p_id=<?php echo $post_id;?>"><?php echo $post_author ?></a>, на дата/ час <span class="glyphicon glyphicon-time"></span> <?php echo $post_date ?>
-            </p>
-            <hr class="tight">
-            <div class="exc"><?php echo $post_content?> ...</div>
-            <a class="btn btn-primary block" href="post.php?p_id=<?php echo $post_id; ?>">Прочети... <span
+
+
+            <hr>
+            <div class="exc"><?php echo $post_content?></div>
+            <a class="btn btn-primary block" href="post.php?p_id=<?php echo $post_id; ?>">Read More <span
                     class="glyphicon glyphicon-chevron-right"></span></a>
-                    <?php 
-                    /*********** */
-                    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$link = mysqli_connect('localhost', 'my_user', 'my_password', 'test');
 
-printf("Initial character set: %s\n", mysqli_character_set_name($link));
-
-/* change character set to utf8mb4 */
-mysqli_set_charset($link, "utf8mb4");
-
-printf("Current character set: %s\n", mysqli_character_set_name($link));
-                    /***/
-        </div>
-        </div>
-        
             <hr>
 
 
             <?php }  } ?>
 
-        
+        </div>
 
         <!-- Blog Sidebar Widgets Column -->
 
@@ -133,8 +118,7 @@ printf("Current character set: %s\n", mysqli_character_set_name($link));
     </div>
     <!-- /.row -->
 
-    
-    <ul class="pager pagination pagination-sm">
+    <ul class="pager">
 
         <?php 
 
@@ -144,16 +128,14 @@ printf("Current character set: %s\n", mysqli_character_set_name($link));
 
         if($i == $page) {
 
-             echo "<li class='page-item active' aria-current='page'><a class='page-link' href='blog.php?page={$i}'>{$i}</a></li>";
+             echo "<li '><a class='active_link' href='index.php?page={$i}'>{$i}</a></li>";
 
         }  else {
 
-            echo "<li class='page-item'><a href='blog.php?page={$i}' class='page-link'>{$i}</a></li>";
+            echo "<li '><a href='index.php?page={$i}'>{$i}</a></li>";
         }
         }
          ?>
-         
     </ul>
-    </div>
-
+</div>
 <?php include "includes/footer.php";?>

@@ -1,5 +1,6 @@
-<?php session_start(); 
-header('Content-Type: text/html; charset=utf-8');
+<?php session_start();
+  //header("Content-Type: text/html; charset=utf-8");
+
 ?>
 <?php include "admin/functions.php"; ?>
 <?php include "includes/functions.php"; ?>

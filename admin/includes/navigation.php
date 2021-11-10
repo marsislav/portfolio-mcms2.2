@@ -82,7 +82,7 @@ if(isset($_SESSION['username'])) {
                                <a href="users.php">View All Users</a>
                            </li>
                            <li>
-                               <a href="users.php?source=add_user">Add User</a>
+                               <a href="users.php?source=add_user">Add Settings</a>
                            </li>
                        </ul>
                    </li>
@@ -90,7 +90,16 @@ if(isset($_SESSION['username'])) {
                        <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> Profile</a>
                    </li>
                    <li>
-                       <a href="profile.php"><i class="fa fa-fw fa-dashboard"></i> Settings</a>
+                       <a href="javascript:;" data-toggle="collapse" data-target="#settings_dropdown"><i
+                               class="fa fa-fw fa-arrows-v"></i>Settings <i class="fa fa-fw fa-caret-down"></i></a>
+                       <ul id="settings_dropdown" class="collapse">
+                           <li>
+                               <a href="./settings.php"> View All Settings</a>
+                           </li>
+                           <li>
+                               <a href="settings.php?source=add_settings">Add Settings</a>
+                           </li>
+                       </ul>
                    </li>
                </ul>
            </div>

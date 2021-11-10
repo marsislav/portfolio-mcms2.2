@@ -19,6 +19,7 @@ $body       = $_POST['body'];
 
     <section id="login">
         <div class="container">
+        <div class="all">
             <div class="row">
                 <div class="col-xs-6 col-xs-offset-3">
                     <div class="form-wrap">

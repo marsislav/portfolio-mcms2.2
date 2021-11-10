@@ -16,6 +16,7 @@
                     ?>
                 </ul>
             </div>
+            <div class="mobile-menu-icon"></div>
         </nav>
     </div>
     <!-- /.container -->

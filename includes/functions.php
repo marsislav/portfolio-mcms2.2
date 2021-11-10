@@ -9,5 +9,11 @@
             echo "<li class='nav-item'>
                     <a href='page.php?page_id=$page_id' class='nav-link'>{$page_title} </a><i></i>
                 </li>";
+                
+                $url = "https://".$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI]; 
+                $localhost = "https://marsislav.net/page.php?page_id=5";
+                if ($url == $localhost){
+                header( 'Location: https://marsislav.net/blog.php' );
+                }
         }
     }          

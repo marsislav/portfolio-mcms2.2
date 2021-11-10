@@ -44,7 +44,7 @@
                                                     class="glyphicon glyphicon-user color-blue"></i></span>
 
                                             <input name="username" type="text" class="form-control"
-                                                placeholder="Enter Username">
+                                                placeholder="Въведете потребителско име">
                                         </div>
                                     </div>
 
@@ -53,13 +53,13 @@
                                             <span class="input-group-addon"><i
                                                     class="glyphicon glyphicon-lock color-blue"></i></span>
                                             <input name="password" type="password" class="form-control"
-                                                placeholder="Enter Password">
+                                                placeholder="Въведете парола">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
 
-                                        <input name="login" class="btn btn-lg btn-primary btn-block" value="Login"
+                                        <input name="login" class="btn btn-lg btn-primary btn-block" value="Вход"
                                             type="submit">
                                     </div>
 

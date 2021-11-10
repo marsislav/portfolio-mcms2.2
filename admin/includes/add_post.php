@@ -12,16 +12,15 @@
         //$post_comment_count=555;
 
         move_uploaded_file($post_image_temp,"../img/$post_image");
-
         $query="INSERT INTO posts(post_category_id, post_title, post_author, post_date, post_image, post_content, post_tags, post_status) ";
         $query.="VALUES({$post_category_id},'{$post_title}', '{$post_author}', now(), '{$post_image}','{$post_content}', '{$post_tags}', '{$post_status}')";
-
+$connection->set_charset("utf8");
         $create_post_query=mysqli_query($connection, $query);
         
-        confirm($create_post_query);
+        confirm($create_post_query, 'set names utf8');
         //pull out last created id :
         $the_post_id=mysqli_insert_id($connection);
-        echo "<p class='bg-success'>Post Created. <a href='../post.php?p_id={$the_post_id}' target='_blank'>View Post.</a> OR <a href='posts.php'>Edit More Posts</a></p>";
+        echo "<p class='bg-success'>Статията е създадена. <a href='../post.php?p_id={$the_post_id}' target='_blank'>Преглед </a> ИЛИ <a href='posts.php'>редактиране на други статии?</a></p>";
     }
 ?>
 
@@ -29,12 +28,12 @@
 
 
     <div class="form-group">
-        <label for="title">Post Title</label>
+        <label for="title">Заглавие</label>
         <input type="text" class="form-control" name="title">
     </div>
 
     <div class="form-group">
-        <label for="category">Category</label>
+        <label for="category">Категория</label>
         <select name="post_category" id="">
 
             <?php
@@ -64,7 +63,7 @@
 
 
     <div class="form-group">
-        <label for="author">Post Author</label>
+        <label for="author">Автор</label>
         <select name="author" id="post_author">
             <?php
             $query="SELECT * FROM users";
@@ -120,26 +119,26 @@
 
     <div class="form-group">
         <select name="post_status" id="">
-            <option value="draft">Post Status</option>
-            <option value="published">Published</option>
-            <option value="draft">Draft</option>
+            <option value="draft">Състояние</option>
+            <option value="published">Публикувана</option>
+            <option value="draft">Чернова</option>
         </select>
     </div>
 
 
 
     <div class="form-group">
-        <label for="post_image">Post Image</label>
+        <label for="post_image">Заглавна снимка</label>
         <input type="file" name="image">
     </div>
 
     <div class="form-group">
-        <label for="post_tags">Post Tags</label>
+        <label for="post_tags">Етикети</label>
         <input type="text" class="form-control" name="post_tags">
     </div>
 
     <div class="form-group">
-        <label for="post_content">Post Content</label>
+        <label for="post_content">Съдържание</label>
         <textarea class="form-control " name="post_content" id="body" cols="30" rows="10">
          </textarea>
     </div>
@@ -147,7 +146,7 @@
 
 
     <div class="form-group">
-        <input class="btn btn-primary" type="submit" name="create_post" value="Publish Post">
+        <input class="btn btn-primary" type="submit" name="create_post" value="Публикуване">
     </div>
 
 

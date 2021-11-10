@@ -33,10 +33,16 @@
             <h1>
                 <?php echo $page_title;?>
             </h1>
-
-            <hr />
             <div>
                 <?php echo $page_content;?>
+                <?php 
+                    $url = "https://".$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI]; 
+                    
+                    $contacts = "https://marsislav.net/page.php?page_id=6";
+                    if ($url==$contacts) {
+                    include "includes/contact-form.php";
+                    }
+                    ?>
             </div>
 
         </div>
