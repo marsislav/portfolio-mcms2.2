@@ -8,7 +8,7 @@
     
  
     <!-- Page Content -->
-    <div class="container">
+    <div class="container post">
         <div class="all">
         <div class="row">
 
@@ -145,24 +145,24 @@
         <!-- Comments Form -->
         <div class="card card-body bg-light">
 
-            <h4>Leave a Comment:</h4>
+            <h4>Оставете коментар:</h4>
             <form action="#" method="post" role="form">
 
                 <div class="form-group">
-                    <label for="Author">Author</label>
+                    <label for="Author">Автор: </label>
                     <input type="text" name="comment_author" class="form-control" name="comment_author">
                 </div>
 
                 <div class="form-group">
-                    <label for="Author">Email</label>
+                    <label for="Author">Email адрес: </label>
                     <input type="email" name="comment_email" class="form-control" name="comment_email">
                 </div>
 
                 <div class="form-group">
-                    <label for="comment">Your Comment</label>
+                    <label for="comment">Вашият коментар: </label>
                     <textarea name="comment_content" class="form-control" rows="3"></textarea>
                 </div>
-                <button type="submit" name="create_comment" class="btn btn-primary">Submit</button>
+                <button type="submit" name="create_comment" class="btn btn-primary">Изпрати</button>
             </form>
         </div>
 

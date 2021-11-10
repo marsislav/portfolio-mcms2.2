@@ -58,7 +58,7 @@
         if($count < 1) {
 
 
-            echo "<h3 class='text-center'>не са налични статии</h3>";
+            echo "<h3 class='text-center'>Не са налични статии</h3>";
 
         } else {
 
@@ -104,18 +104,6 @@
             <div class="exc"><?php echo $post_content?> ...</div>
             <a class="btn btn-primary block" href="post.php?p_id=<?php echo $post_id; ?>">Прочети... <span
                     class="glyphicon glyphicon-chevron-right"></span></a>
-                    <?php 
-                    /*********** */
-                    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$link = mysqli_connect('localhost', 'my_user', 'my_password', 'test');
-
-printf("Initial character set: %s\n", mysqli_character_set_name($link));
-
-/* change character set to utf8mb4 */
-mysqli_set_charset($link, "utf8mb4");
-
-printf("Current character set: %s\n", mysqli_character_set_name($link));
-                    /***/
         </div>
         </div>
         
@@ -154,6 +142,5 @@ printf("Current character set: %s\n", mysqli_character_set_name($link));
          ?>
          
     </ul>
-    </div>
 
 <?php include "includes/footer.php";?>
