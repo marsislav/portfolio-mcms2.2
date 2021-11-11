@@ -229,7 +229,7 @@ echo "<td><img width='100' src='../img/$post_image' alt='image'></td>";
 
                 <?php   
 
-            echo '<td><input class="btn btn-danger" type="submit" name="delete" value="Delete"></td>';
+            echo '<td><input class="btn btn-danger delete" type="submit" name="delete" value="Delete" ></td>';
 
           ?>
             </form>
@@ -267,7 +267,7 @@ if(isset($_POST['delete'])){
     
     $query = "DELETE FROM posts WHERE post_id = {$the_post_id} ";
     $delete_query = mysqli_query($connection, $query);
-    header("Location: admin/posts.php");
+    header("Location: posts.php");
     
     
 }

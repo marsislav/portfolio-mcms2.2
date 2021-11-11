@@ -47,10 +47,8 @@
 
          } else {
 
-            
-
-         $post_query_count = "SELECT * FROM `posts` ORDER BY `post_date` ASC";
-         }   
+            $post_query_count = "SELECT * FROM `posts` WHERE `post_status` = 'published' ORDER BY `post_date` DESC";
+            } 
 
         $find_count = mysqli_query($connection,$post_query_count);
         $count = mysqli_num_rows($find_count);
@@ -64,7 +62,7 @@
 
         $count  = ceil($count /$per_page);
 
-        $query = "SELECT * FROM posts LIMIT $page_1, $per_page ";
+        $query = "SELECT * FROM `posts` WHERE `post_status` = 'published' ORDER BY `post_date` DESC LIMIT $page_1, $per_page";
         $select_all_posts_query = mysqli_query($connection,$query);
 
         while($row = mysqli_fetch_assoc($select_all_posts_query)) {
